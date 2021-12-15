@@ -40,8 +40,8 @@ public class ThirdPersonMovement : MonoBehaviour
             
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
 
-            Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward + new Vector3(0, isGoUp, 0);//+ new Vector3(0, Convert.ToSingle(space),0 )
-            Debug.Log(Convert.ToSingle(space));
+           
+            Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward + new Vector3(0, isGoUp, 0);
             controller.Move(moveDir.normalized * speed * Time.deltaTime);
         }
     }
